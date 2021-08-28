@@ -1,5 +1,7 @@
 # nuxt-app
 
+create nuxt app with Nuxt.js & Vuex & Vuetify
+
 ## Build Setup
 
 ```bash
