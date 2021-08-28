@@ -24,6 +24,25 @@ export default {
       (res) => res.json()
     );
   },
+   head: {
+    titleTemplate: "%s | nuxt-app",
+    title: "Mountain Page",
+     htmlAttrs: {
+      lang: 'en',
+      amp: true
+    },
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "My first Nuxt application",
+      },
+      { name: "format-detection", content: "telephone=no" },
+    ],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+  },
 };
 </script>
 

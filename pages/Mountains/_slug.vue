@@ -1,5 +1,10 @@
 <template>
   <v-container>
+     <SocialHead
+      :title="mountain.title"
+      :description="mountain.description"
+      :image="mountain.image"
+    />
     <v-card class="mx-auto" max-width="1000">
       <v-img
         class="white--text align-end"
@@ -40,6 +45,25 @@ export default {
       `https://api.nuxtjs.dev/mountains/${params.slug}`
     );
     return { mountain };
+  },
+  head: {
+    titleTemplate: "%s | nuxt-app",
+    title: "Detail's Mountain Page",
+    htmlAttrs: {
+      lang: "en",
+      amp: true,
+    },
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "My first Nuxt application",
+      },
+      { name: "format-detection", content: "telephone=no" },
+    ],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 };
 </script>

@@ -4,12 +4,16 @@
       <img :src="review.picture.large" alt="" />
     </div>
     <div class="text-container">
-      <h4>{{ review.login.username }}</h4>
+      <h4>
+        {{ review.name.title }} {{ review.name.first }} {{ review.name.last }}
+      </h4>
       <v-rating
-        v-model="rating"
-        background-color="orange lighten-3"
-        color="orange"
-        medium
+        :value="rating"
+        color="amber"
+        dense
+        half-increments
+        readonly
+        size="14"
       ></v-rating>
     </div>
   </div>
@@ -19,7 +23,7 @@
 export default {
   data() {
     return {
-      rating: 0,
+      rating: Math.fround(Math.random() * 5),
     };
   },
   props: ["review"],

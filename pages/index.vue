@@ -2,16 +2,20 @@
   <div>
     <v-container>
       <v-row>
-        <LargeCardDisplay
-          v-for="cardInfo in largeCardInfo"
-          :key="cardInfo.id"
-          :cardsSection="cardInfo"
-        />
-        <SmallCardDisplay
-          v-for="cardInfo in smallCardInfo"
-          :key="cardInfo.id"
-          :cardsSection="cardInfo"
-        />
+        <v-col cols="12">
+          <LargeCardDisplay
+            v-for="cardInfo in largeCardInfo"
+            :key="cardInfo.id"
+            :cardsSection="cardInfo"
+          />
+        </v-col>
+        <v-col cols="12">
+          <SmallCardDisplay
+            v-for="cardInfo in smallCardInfo"
+            :key="cardInfo.id"
+            :cardsSection="cardInfo"
+          />
+        </v-col>
       </v-row>
     </v-container>
   </div>
