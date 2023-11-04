@@ -1,4 +1,4 @@
-# nuxt-app
+# NuxtApp
 
 create nuxt app with Nuxt.js & Vuex & Vuetify
 
